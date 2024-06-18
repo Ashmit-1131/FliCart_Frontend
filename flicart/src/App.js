@@ -1,10 +1,23 @@
 
+import {Routes, Route } from 'react-router-dom';
 import './App.css';
+import Register from './component/Register';
+import Login from './component/Login';
 
+
+
+
+export const config={
+  endpoint:`https://qkart-123-pil7.onrender.com/api/v1`
+}
 function App() {
+
   return (
     <div className="App">
-      <h1>Do whatever you're doing to spoil yourself but atleast do something which will help you in the future </h1>
+     <Routes>
+      <Route path='/' element={<Register/>}/>
+      <Route path='/login' element={<Login/>}/>
+     </Routes>
     
     </div>
   );
